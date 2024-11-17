@@ -19,6 +19,8 @@ public class Main2 {
 
         System.out.println(toSTR(254,16));
 
+        System.out.println("Вносим измение");
+
     }
 //    public static void elevator(int n) { // 0
 //        if (n == 0) {
