@@ -257,5 +257,70 @@ public class Main {
 //            str = str.replace(str1, change);
 //            System.out.println(str);
 //        }
+
+//        StringBuilder sb = new StringBuilder();
+//        System.out.println(sb.capacity()); // метод позволяет определить объем памяти выделеный под метод
+//        System.out.println(sb.length()); // длин строки
+//        System.out.println(sb + "\n"); //
+//
+//        StringBuilder sb1 = new StringBuilder(1000);
+//        System.out.println(sb1.capacity()); // метод позволяет определить объем памяти выделеный под метод
+//        System.out.println(sb1.length()); // длин строки
+//        System.out.println(sb1 + "\n"); //
+//
+//        StringBuilder sb2 = new StringBuilder("Java");
+//        System.out.println(sb2.capacity()); // метод позволяет определить объем памяти выделеный под метод
+//        System.out.println(sb2.length()); // длин строки
+//        System.out.println(sb2 + "\n"); //
+//
+//        StringBuilder sb3 = new StringBuilder("Capital");
+//        System.out.println(sb3.capacity()); // метод позволяет определить объем памяти выделеный под метод
+//        System.out.println(sb3.length()); // длин строки
+//        System.out.println(sb3 + "\n");
+
+//        StringBuilder sb = new StringBuilder();
+//        sb.append('a'); // метод добавляет в строку любые типы данных путем преоброзования его в тип String
+//        sb.append(true);
+//        sb.append(10);
+//        sb.append(13213L);
+//        sb.append(10.20);
+//        sb.append(12.32f);
+//        sb.append("Hello").append(" ").append("world");
+//        sb.insert(5, "!");
+//        sb.insert(0, "!");
+//        sb.insert(sb.length(), "!");
+//        sb.delete(5, 7);// удаление то индекса до индекса
+//        sb.deleteCharAt(5); // удаление по индексу
+//        sb.replace(6, 11, "java"); // удаление то индексу до индек5с и вставляет указаную строку
+//        String st = sb.substring(6, 7); // берет символ указаный от индекс до индекса и сохраняет в переменную
+//        System.out.println(st);
+//        String st1 = sb.substring(6); // берет символ указаный от индекс до индекса и сохраняет в переменную
+//        System.out.println(st1);
+//        System.out.println(sb);
+//        sb.reverse(); // переворачивает строку наоборот
+//        System.out.println(sb);
+//        System.out.println(sb.indexOf("l")); // поиск индекса указаного символа
+//        System.out.println(sb.indexOf("l",4)); // поиск индекса указаного символа с индекса
+        StringBuilder sb1 = createStr(5,3);
+        System.out.println(sb1);
+        modifyStr(sb1, "=", "равно");
+        modifyStr(sb1, "+", "плюс");
+        modifyStr(sb1, "-", "минус");
+        modifyStr(sb1, "*", "умножить");
+        System.out.println(sb1);
+    }
+    public static StringBuilder createStr(int a, int b){
+        StringBuilder res = new StringBuilder();
+        res.append(a).append(" + ").append(b).append(" = ").append(a + b).append("\n");
+        res.append(a).append(" - ").append(b).append(" = ").append(a - b).append("\n");
+        res.append(a).append(" * ").append(b).append(" = ").append(a * b).append("\n");
+        return res;
+    }
+    public  static StringBuilder modifyStr (StringBuilder stBuild, String oldStr, String newStr){ // можно не возращать данных при использование void
+        int pos;
+        while((pos = stBuild.indexOf(oldStr)) != -1) {
+            stBuild.replace(pos,pos + 1, newStr);
+        }
+        return stBuild;
     }
 }
