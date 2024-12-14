@@ -10,6 +10,6 @@ public class Main {
         System.out.println("Площадь прямоугольника: " + rect1.getArea());
         System.out.println("Пириметр прямоугольника: " + rect1.getPerimet());
         System.out.printf("Гипотенуза прямоугольника: %.2f%n", rect1.getHypotenuse());
-        rect1.getPrint();
+        rect1.getDraw();
     }
 }

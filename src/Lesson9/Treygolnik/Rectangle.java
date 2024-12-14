@@ -3,12 +3,14 @@ package Lesson9.Treygolnik;
 import javax.imageio.metadata.IIOMetadataFormatImpl;
 
 public class Rectangle {
-    private  int length; // поля класса
+    private  int length; // поле класса
     private int width;
 
     public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
+//        this.length = length;
+//        this.width = width;
+        setLength(length);
+        setWidth(width);
     }
 
     public int getLength() {
@@ -41,7 +43,7 @@ public class Rectangle {
         return Math.sqrt(Math.pow(length,2)+ Math.pow(width,2));
     }
 
-    public void getPrint(){
+    public void getDraw(){
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < width; j++) {
                 System.out.print("*");
