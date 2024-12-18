@@ -11,7 +11,7 @@ public class Program {
 
     }
 }
-class Point{
+class Point {
     private static int count; // статическое свойство(поле)
     int x; // динамическое свойство(поле)
     int y; // динамическое свойство(поле)
