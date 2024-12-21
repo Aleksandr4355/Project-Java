@@ -8,15 +8,29 @@ public class Student extends Human{
 
     public Student(String lastName, String fistName, int age, String specialityStudent, String group, double rating, double attendance) {
         super(lastName, fistName, age);
-//        this.speciality = speciality;
-//        this.group = group;
-//        this.rating = rating;
-//        this.attendance = attendance;
         setSpecialityStudent(specialityStudent);
         setGroup(group);
         setRating(rating);
         setAttendance(attendance);
         System.out.println("StudentConstructor:\t" + Integer.toHexString(hashCode()));
+    }
+
+    public Student(Human human, String specialityStudent, String group, double rating, double attendance) {
+        super(human);
+        setSpecialityStudent(specialityStudent);
+        setGroup(group);
+        setRating(rating);
+        setAttendance(attendance);
+        System.out.println("Student1Constructor:\t" + Integer.toHexString(hashCode()));
+    }
+
+    public Student(Student other){
+        super(other);
+        this.speciality = other.speciality;
+        this.group = other.group;
+        this.rating  = other.rating;
+        this.attendance = other.attendance;
+        System.out.println("StudentCopyConstructor:\t" + Integer.toHexString(hashCode()));
     }
 
     public String getSpeciality() {

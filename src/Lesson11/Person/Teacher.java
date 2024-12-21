@@ -12,7 +12,7 @@ public class Teacher extends Human{
         this.amountObject = amountObject;
         System.out.println("TeacherConstructor:\t" + Integer.toHexString(hashCode()));
     }
-    
+
     @Override
     public String toString() {
         return super.toString() + "Teacher{" +
