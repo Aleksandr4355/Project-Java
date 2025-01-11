@@ -15,5 +15,11 @@ public class Base {
             }
         }
 
+        Line l = new Line(5,"red",1,2,3,4);
+        System.out.println();
+        System.out.println(l);
+        System.out.println(GeomInterface.MIN_COORD);
+        System.out.println(GeomInterface.MAX_COORD);
+        GeomInterface.showInterval();
     }
 }
