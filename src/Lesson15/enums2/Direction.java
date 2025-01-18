@@ -1,5 +1,7 @@
 package Lesson15.enums2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public enum Direction {
@@ -9,6 +11,7 @@ public enum Direction {
 
     public  static  Direction randomDirection(){
         Direction [] directions = values();
+//        System.out.println(Arrays.toString(directions));
         return directions [RAND.nextInt(directions.length)];
     }
 

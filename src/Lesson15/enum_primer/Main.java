@@ -10,8 +10,8 @@ enum RegEx {
 
     private final Pattern pattern;
 
-    RegEx( final String pattern) { // конструктор преобразуют строку в регулярный шаблон выражения
-        this.pattern = Pattern.compile(pattern);
+    RegEx(final String pattern) { // конструктор преобразуют строку в регулярный шаблон выражения
+        this.pattern = Pattern.compile(pattern);                                              
     }
 
     public boolean test (final  String input){
