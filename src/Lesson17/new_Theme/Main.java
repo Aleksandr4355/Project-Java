@@ -1,4 +1,4 @@
-package Lesson16.new_Theme;
+package Lesson17.new_Theme;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,10 +23,10 @@ class Calc{
         System.out.println(a+b);
     }
 }
-//class CalcElse extends Calc{
-//    @Override
-//    public void calculate(int a, int b) {
-//        System.out.println(a*b);
-//    }
-//}
+class CalcElse extends Calc{
+    @Override
+    public void calculate(int a, int b) {
+        System.out.println(a*b);
+    }
+}
 
